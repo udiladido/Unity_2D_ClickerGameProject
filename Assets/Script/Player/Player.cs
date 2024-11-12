@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
 
     public Animator animator { get; private set; }
 
-    public PlayerController controller { get; private set; }
+    public PlayerController Input { get; private set; }
 
 
     private void Awake()
@@ -24,9 +24,15 @@ public class Player : MonoBehaviour
       
         animationData.Initialize();
         animator = GetComponent<Animator>();
-        controller = GetComponent<PlayerController>();
+        Input = GetComponent<PlayerController>();
 
         stateMachine = new PlayerStateMachine(this);
+    }
+
+    private void Update()
+    {
+       stateMachine.Update();
+
     }
 
 }

@@ -1,19 +1,27 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public TouchInput playerInputs { get; private set; }
+    public TouchInput.PlayerActions playerActions { get; private set; }
 
-    public event Action OnTouchEvent;
-
-
-    public void CallTouchEvent()
+    private void Awake()
     {
-        OnTouchEvent?.Invoke();
+        playerInputs = new TouchInput();
+        playerActions = playerInputs.Player;
     }
 
+    private void OnEnable()
+    {
+        playerInputs.Enable();
+    }
 
+    private void OnDisable()
+    {
+        playerInputs.Disable();
+    }
 }
+
+
+

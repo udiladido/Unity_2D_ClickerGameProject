@@ -924,7 +924,6 @@ GameObject:
   - component: {fileID: 560926069}
   - component: {fileID: 560926068}
   - component: {fileID: 560926070}
-  - component: {fileID: 560926071}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -975,36 +974,6 @@ MonoBehaviour:
   - Name: 
     prefab: {fileID: 0}
     size: 0
---- !u!114 &560926071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560926067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 1981067e09f42b54ba9c0975b5fba9ae, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1 &597063493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,6 +1781,7 @@ GameObject:
   - component: {fileID: 1006853550}
   - component: {fileID: 1006853552}
   - component: {fileID: 1006853555}
+  - component: {fileID: 1006853556}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1959,10 +1929,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <animationData>k__BackingField:
-    Player_Attack1: Attack1
-    Player_Attack2: Attack2
-    Player_Attack3: Attack3
-  <Data>k__BackingField: {fileID: 0}
+    attackParameterName: Attack
+    ComboAttackParameterName: ComboAttack
+  <Data>k__BackingField: {fileID: 11400000, guid: 5a9b44c3123cfe54089e5f76f6f24714, type: 2}
+--- !u!114 &1006853556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006853546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 1981067e09f42b54ba9c0975b5fba9ae, type: 3}
+  m_NotificationBehavior: 3
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1035595791
 GameObject:
   m_ObjectHideFlags: 0
@@ -3413,7 +3412,7 @@ SceneRoots:
   - {fileID: 1664432131}
   - {fileID: 142497220}
   - {fileID: 1347929038}
-  - {fileID: 601770784}
   - {fileID: 1461651998}
   - {fileID: 518896478}
   - {fileID: 560926069}
+  - {fileID: 601770784}

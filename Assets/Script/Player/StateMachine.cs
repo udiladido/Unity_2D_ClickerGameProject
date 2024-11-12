@@ -1,20 +1,22 @@
 
+using UnityEngine;
+
 public abstract class StateMachine
 {
     protected ICharacterStrategy characterStrategy;
 
 
-    public void ChangeCharacter(ICharacterStrategy character)
+    public void ChangeState(ICharacterStrategy character)
     {
-
+        characterStrategy?.Exit();
         characterStrategy = character;
-        
+        characterStrategy?.Enter();
     }
-
-    public void Attack()
-    {
-        characterStrategy?.Attack();
-
+    public void Update()
+    { 
+    
+        characterStrategy?.Update();
+    
     }
 
 }
