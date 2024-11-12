@@ -1,27 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-
-[SerializeField]
+[Serializable]
 public class PlayerAnimationData 
 {
 
-    private string HeroKnight_Attack1 = "Attack1";
-    private string HeroKnight_Attack2 = "Attack2";
-    private string HeroKnight_Attack3 = "Attack3";
+    [SerializeField] private string Player_Attack1 = "Attack1";
+    [SerializeField] private string Player_Attack2 = "Attack2";
+    [SerializeField] private string Player_Attack3 = "Attack3";
 
-    public int HeroKnight_Attack1Hash { get; private set;}
-    public int HeroKnight_Attack2Hash { get; private set; }
-    public int HeroKnight_Attack3Hash { get; private set; }
+    public int Player_Attack1Hash { get; private set;}
+    public int Player_Attack2Hash { get; private set; }
+    public int Player_Attack3Hash { get; private set; }
 
 
 
     public void Initialize()
     {
-        HeroKnight_Attack1Hash = Animator.StringToHash(HeroKnight_Attack1);
-        HeroKnight_Attack2Hash = Animator.StringToHash(HeroKnight_Attack2);
-        HeroKnight_Attack3Hash = Animator.StringToHash(HeroKnight_Attack3);
+        Player_Attack1Hash = Animator.StringToHash(Player_Attack1);
+        Player_Attack2Hash = Animator.StringToHash(Player_Attack2);
+        Player_Attack3Hash = Animator.StringToHash(Player_Attack3);
        
     }
 

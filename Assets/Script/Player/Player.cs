@@ -5,15 +5,28 @@ using UnityEngine;
 public class Player : MonoBehaviour
   {
 
-    public PlayerAnimationData AnimationData { get; private set; }
+    [field :Header("Animations")]
+    [field : SerializeField] public PlayerAnimationData animationData { get; private set; }
 
-    public Animator Animator { get; private set; }
+    [field: Header("References")]
+    [field: SerializeField] public PlayerSO Data { get; private set; }
+
+
+    private PlayerStateMachine stateMachine;
+
+    public Animator animator { get; private set; }
+
+    public PlayerController controller { get; private set; }
 
 
     private void Awake()
     {
-        AnimationData.Initialize();
-        Animator = GetComponentInChildren<Animator>();
+      
+        animationData.Initialize();
+        animator = GetComponent<Animator>();
+        controller = GetComponent<PlayerController>();
 
+        stateMachine = new PlayerStateMachine(this);
     }
+
 }

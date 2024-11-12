@@ -7,8 +7,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    private ICharacterStrategy characterState;
-
     public event Action OnTouchEvent;
 
 
@@ -17,14 +15,5 @@ public class PlayerController : MonoBehaviour
         OnTouchEvent?.Invoke();
     }
 
-    public void ChangeCharacter(ICharacterStrategy character)
-    {
-
-        characterState = character;
-
-    }
-    
-
-    
 
 }

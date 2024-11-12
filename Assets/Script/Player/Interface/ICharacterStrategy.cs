@@ -1,8 +1,9 @@
 
+using UnityEngine;
+
 public interface ICharacterStrategy
 {
-    void Attack();
-
-
+    public void Initialize(Animator animator);
+    public void Attack();
 
 }

@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class BaseCharacterState : ICharacterStrategy   
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Initialize(Animator animator)
+    { 
+    
+    
+    }
+
+
+    public void Attack()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
