@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
 
-[System.Serializable]
-public class GoodsData 
+
+public class GoodsData : MonoBehaviour
 {
 
 
-    private BigInteger gold = 0;
-    private BigInteger PayGold = 0;
-  
+    public int testGoldAmount;
+    private BigInteger gold = 1;
+    private BigInteger PayGold = 1;
+    private BigInteger dropGold = 1;
 
     private string FormatNum(BigInteger num)
     {
@@ -32,8 +33,6 @@ public class GoodsData
 
     public string stringGold()
     {
-
-
         return FormatNum(gold);
     
     }
@@ -41,11 +40,25 @@ public class GoodsData
     public string stringPayGold()
     {
 
-
         return FormatNum(gold);
 
     }
 
+    public BigInteger GetGold()
+    {
+        gold += dropGold;
+
+        return gold;
     
+    
+    }
+
+    public void TestGold()
+    {
+        gold += testGoldAmount;
+    
+    }
+
+
 
 }
