@@ -10,8 +10,7 @@ public class GoodsData : MonoBehaviour
 
     public int testGoldAmount;
     private BigInteger gold = 1;
-    private BigInteger PayGold = 1;
-    private BigInteger dropGold = 1;
+    private BigInteger payGold = 1;
 
     private string FormatNum(BigInteger num)
     {
@@ -44,13 +43,23 @@ public class GoodsData : MonoBehaviour
 
     }
 
-    public BigInteger GetGold()
+    public BigInteger GetGold(BigInteger dropGold)
     {
+
         gold += dropGold;
 
         return gold;
-    
-    
+   
+    }
+
+    public BigInteger PayGold(BigInteger CostGold)
+    {
+
+        if(CostGold < gold)
+        gold -= CostGold;
+
+        return gold;
+
     }
 
     public void TestGold()

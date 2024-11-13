@@ -9,6 +9,9 @@ public class GameManager : Singleton<GameManager>
 
     private GoodsData goodsData;
 
+    public GoodsData GoodsData { get { return goodsData; } }
+
+   
     [Header("UI")]
     public TMP_Text textGold;
 
