@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class LegacyPlayer : Singleton<LegacyPlayer>
+public class LegacyPlayer : MonoBehaviour
 {
 
     private Animator playerAnim;
@@ -13,10 +13,7 @@ public class LegacyPlayer : Singleton<LegacyPlayer>
     public bool AutoClick = false;
     private float AutoClicktime = 0.5f;
 
-
     private Coroutine coroutine;
-
-
 
     void Start()
     {
@@ -61,7 +58,6 @@ public class LegacyPlayer : Singleton<LegacyPlayer>
         }
 
     }
-
     private void ClickAttack()
     {
 
@@ -94,7 +90,6 @@ public class LegacyPlayer : Singleton<LegacyPlayer>
         }
 
     }
-
     private void OnDisable()
     {
       

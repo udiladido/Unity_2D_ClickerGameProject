@@ -7,12 +7,6 @@ public class EnemyHealth : MonoBehaviour
     private int health;
     public bool IsDead => health == 0;
 
-    private void Start()
-    {
-
-        //최대 체력 - ScriptableObject로 관리헤보기
-     
-    }
 
     public void TakeDamage(int damage)
     {
@@ -24,4 +18,7 @@ public class EnemyHealth : MonoBehaviour
 
 
     }
+
+
+
 }
