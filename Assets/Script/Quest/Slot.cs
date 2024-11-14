@@ -66,7 +66,7 @@ public class Slot : MonoBehaviour
     private void Upgrade()
     {
 
-        if (GameManager.Instance.GoodsData.HasEnough(upgradeAmount)) 
+        if (GameManager_Legacy.Instance.GoodsData.HasEnough(upgradeAmount)) 
         {
         
             upgradeLevel++;
@@ -74,7 +74,7 @@ public class Slot : MonoBehaviour
             if (upgradeLevel < data.maxUpgrade)
             {
 
-                GameManager.Instance.GoodsData.PayGold(upgradeAmount);
+                GameManager_Legacy.Instance.GoodsData.PayGold(upgradeAmount);
                 upgradeCost.text = data.stringGold(data.UpgradeCost[upgradeLevel]);
                 earnMoney.text = data.stringGold(data.EarnMoney[upgradeLevel]);
 
@@ -97,7 +97,7 @@ public class Slot : MonoBehaviour
     private void UpdateUI()
     {
 
-        GameManager.Instance.textGold.text = GameManager.Instance.GoodsData.stringGold();
+        GameManager_Legacy.Instance.textGold.text = GameManager_Legacy.Instance.GoodsData.stringGold();
 
 
     }
@@ -105,39 +105,19 @@ public class Slot : MonoBehaviour
 
     private void QuestDone()
     {
-
         if (!isCoolTime)
         {
-
-            GameManager.Instance.GoodsData.GetGold(earnMoneyAmount);
+            GameManager_Legacy.Instance.GoodsData.GetGold(earnMoneyAmount);
             UpdateUI();
-
-            StartCoroutine(AutoClickCoroutine());
-
+            // cooldownImage를 직접 전달
+            CooldownManager.Instance.StartCooldown(this, data.CoolTime[upgradeLevel], cooldownImage);
+            isCoolTime = true;
         }
-    
     }
 
-    private IEnumerator AutoClickCoroutine()
+    public void SetCooldownComplete()
     {
-
-        float remainingTime = data.CoolTime[upgradeLevel];
-
-        while (remainingTime > 0)
-        {
-            
-            isCoolTime = true;
-
-            cooldownImage.fillAmount = remainingTime / coolTime;
-
-            remainingTime -= Time.deltaTime;
-            yield return null;
-        }
-
         isCoolTime = false;
-        cooldownImage.fillAmount = 1;
-      
-
     }
 
 }
