@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerBaseState : ICharacterStrategy
+public class PlayerBaseState : IState
 {
 
     protected PlayerStateMachine stateMachine;
@@ -17,6 +17,9 @@ public class PlayerBaseState : ICharacterStrategy
     {
         AddInputActionsCallbacks();
     }
+
+   
+
 
     public virtual void Exit()
     {
@@ -42,16 +45,16 @@ public class PlayerBaseState : ICharacterStrategy
     protected virtual void AddInputActionsCallbacks()
     {
         PlayerController input = stateMachine.Player.Input;
-        stateMachine.Player.Input.playerActions.TouchPress.performed += OnAttackPerformed;
-        stateMachine.Player.Input.playerActions.TouchPress.canceled += OnAttackCanceled;
+        stateMachine.Player.Input.playerActions.Attack.performed += OnAttackPerformed;
+        stateMachine.Player.Input.playerActions.Attack.canceled += OnAttackCanceled;
 
     }
 
     protected virtual void RemoveInputActionsCallbacks()
     {
         PlayerController input = stateMachine.Player.Input;
-        stateMachine.Player.Input.playerActions.TouchPress.performed -= OnAttackPerformed;
-        stateMachine.Player.Input.playerActions.TouchPress.canceled -= OnAttackCanceled;
+        stateMachine.Player.Input.playerActions.Attack.performed -= OnAttackPerformed;
+        stateMachine.Player.Input.playerActions.Attack.canceled -= OnAttackCanceled;
 
 
     }

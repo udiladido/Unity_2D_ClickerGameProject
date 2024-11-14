@@ -37,7 +37,9 @@ public class PlayerComboAttackState : PlayerAttackState
     {
         if (alreadyApplyCombo) return;
 
-        if (attackInfoData.ComboStateIndex == -1) return;
+
+        //마지막 공격 - SO에서 번호 확인
+        if (attackInfoData.ComboStateIndex == 3) return;
 
         if (!stateMachine.IsAttacking) return;
 

@@ -11,7 +11,6 @@ public class Player : MonoBehaviour
     [field: Header("References")]
     [field: SerializeField] public PlayerSO Data { get; private set; }
 
-
     private PlayerStateMachine stateMachine;
 
     public Animator animator { get; private set; }

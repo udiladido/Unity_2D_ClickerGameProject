@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAnimationData 
 {
 
-    [SerializeField] private string attackParameterName = "Attack";
+    [SerializeField] private string attackParameterName = "@Attack";
     [SerializeField] private string ComboAttackParameterName = "ComboAttack";
 
 

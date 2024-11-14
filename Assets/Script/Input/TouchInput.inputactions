@@ -3,12 +3,12 @@
     "maps": [
         {
             "name": "Player",
-            "id": "a581bb02-d9c2-48da-8c59-5ca392b54c77",
+            "id": "c23e7034-a7a0-4f53-a62e-9af90c53aa6d",
             "actions": [
                 {
-                    "name": "TouchPress",
+                    "name": "Attack",
                     "type": "Button",
-                    "id": "3c6f4e85-727f-4196-8cd4-6eaee5b2aac3",
+                    "id": "e675449b-4b34-49c1-90d0-3f9fea490758",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -18,12 +18,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "2311afb1-607f-41d6-9b3b-1a88d0e56833",
+                    "id": "15b0d75d-d3ce-4ffb-b98a-18801998ce84",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "TouchPress",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
