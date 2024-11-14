@@ -31,14 +31,14 @@
 - **클릭 이벤트 처리**
   
 - **자동 클릭 기능**
- -Coroutine 활용
+
+  Coroutine 활용
   
 - **점수 시스템** 
 
 - **아이템 및 업그레이드 시스템**
-- 
+  
 - **게임 내 통화 시스템**
-   
    
 ### 도전 기능 구현
 
@@ -70,17 +70,24 @@
 # 4. 사용 에셋 목록 소개
 
 **유니티 에셋 스토어 내 무료 에셋 사용**
+
 Pixel Black Knight<br>
 https://assetstore.unity.com/packages/2d/characters/pixel-black-knight-103511
+
 Bringer Of Death (free)<br>
 https://assetstore.unity.com/packages/2d/characters/bringer-of-death-free-195719
+
 Hero Knight - Pixel Art<br>
 https://assetstore.unity.com/packages/2d/characters/hero-knight-pixel-art-165188
+
 Bandits - Pixel Art<br>
 https://assetstore.unity.com/packages/2d/characters/bandits-pixel-art-104130
+
 DOTween (HOTween v2)- Free <br>
 https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676
+
 **기타** 
+
 빙 이미지 크리에이터로 생성한 이미지들 Sprite로 사용
 
 -----
